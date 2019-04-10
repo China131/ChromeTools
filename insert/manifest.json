@@ -1,0 +1,28 @@
+{
+	"manifest_version": 2,
+	"name": "笑脸进件第一步-录入新网地址插件",
+	"version": "1.0",
+	"description": "录入新网地址插件-地址换行输入",
+	"author": "jianhao",
+	"icons":
+	{
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	"browser_action": 
+	{
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": 
+	[
+		{
+			"matches": ["https://xwbk.lanmaoly.com/bha-neo-app/gateway/desktop/loanCheck/*"],
+			"js": ["content-script.js"]
+		}
+	],
+	"web_accessible_resources": 
+	[
+		"inject.js"
+	]
+}
